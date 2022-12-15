@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		BCE12EF9294B87E3006A2255 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE12EF8294B87E3006A2255 /* AppDelegate.swift */; };
 		BCE12EFB294B87E3006A2255 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE12EFA294B87E3006A2255 /* SceneDelegate.swift */; };
-		BCE12EFD294B87E3006A2255 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE12EFC294B87E3006A2255 /* ViewController.swift */; };
-		BCE12F00294B87E3006A2255 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE12EFE294B87E3006A2255 /* Main.storyboard */; };
+		BCE12EFD294B87E3006A2255 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE12EFC294B87E3006A2255 /* MainViewController.swift */; };
 		BCE12F02294B87E5006A2255 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE12F01294B87E5006A2255 /* Assets.xcassets */; };
 		BCE12F05294B87E5006A2255 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE12F03294B87E5006A2255 /* LaunchScreen.storyboard */; };
+		BCE12F11294B885B006A2255 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE12F10294B885B006A2255 /* MainInteractor.swift */; };
+		BCE12F14294B8861006A2255 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE12F13294B8861006A2255 /* MainRouter.swift */; };
+		BCE12F17294B8867006A2255 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE12F16294B8867006A2255 /* People.swift */; };
+		BCE12F1A294B8870006A2255 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE12F19294B8870006A2255 /* MainPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BCE12EF5294B87E3006A2255 /* SWAPI-VIPER-Pods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SWAPI-VIPER-Pods.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE12EF8294B87E3006A2255 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCE12EFA294B87E3006A2255 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BCE12EFC294B87E3006A2255 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BCE12EFF294B87E3006A2255 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BCE12EFC294B87E3006A2255 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BCE12F01294B87E5006A2255 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCE12F04294B87E5006A2255 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCE12F06294B87E5006A2255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCE12F10294B885B006A2255 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		BCE12F13294B8861006A2255 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		BCE12F16294B8867006A2255 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
+		BCE12F19294B8870006A2255 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,98 @@
 		BCE12EF7294B87E3006A2255 /* SWAPI-VIPER-Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BCE12EF8294B87E3006A2255 /* AppDelegate.swift */,
-				BCE12EFA294B87E3006A2255 /* SceneDelegate.swift */,
-				BCE12EFC294B87E3006A2255 /* ViewController.swift */,
-				BCE12EFE294B87E3006A2255 /* Main.storyboard */,
-				BCE12F01294B87E5006A2255 /* Assets.xcassets */,
-				BCE12F03294B87E5006A2255 /* LaunchScreen.storyboard */,
-				BCE12F06294B87E5006A2255 /* Info.plist */,
+				BCE12F26294B88D7006A2255 /* Assets */,
+				BCE12F1E294B8891006A2255 /* Modules */,
+				BCE12F1D294B8881006A2255 /* Configuration */,
+				BCE12F1C294B887A006A2255 /* App */,
 			);
 			path = "SWAPI-VIPER-Pods";
+			sourceTree = "<group>";
+		};
+		BCE12F1C294B887A006A2255 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BCE12EF8294B87E3006A2255 /* AppDelegate.swift */,
+				BCE12EFA294B87E3006A2255 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		BCE12F1D294B8881006A2255 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				BCE12F06294B87E5006A2255 /* Info.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		BCE12F1E294B8891006A2255 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				BCE12F1F294B8899006A2255 /* MainView */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		BCE12F1F294B8899006A2255 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				BCE12F24294B88B8006A2255 /* View */,
+				BCE12F23294B88B4006A2255 /* Presenter */,
+				BCE12F22294B88AE006A2255 /* Interactor */,
+				BCE12F21294B88A6006A2255 /* Entity */,
+				BCE12F20294B889F006A2255 /* Router */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		BCE12F20294B889F006A2255 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BCE12F13294B8861006A2255 /* MainRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		BCE12F21294B88A6006A2255 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				BCE12F16294B8867006A2255 /* People.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		BCE12F22294B88AE006A2255 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				BCE12F10294B885B006A2255 /* MainInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		BCE12F23294B88B4006A2255 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BCE12F19294B8870006A2255 /* MainPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BCE12F24294B88B8006A2255 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BCE12F03294B87E5006A2255 /* LaunchScreen.storyboard */,
+				BCE12EFC294B87E3006A2255 /* MainViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BCE12F26294B88D7006A2255 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				BCE12F01294B87E5006A2255 /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +215,6 @@
 			files = (
 				BCE12F05294B87E5006A2255 /* LaunchScreen.storyboard in Resources */,
 				BCE12F02294B87E5006A2255 /* Assets.xcassets in Resources */,
-				BCE12F00294B87E3006A2255 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +225,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCE12EFD294B87E3006A2255 /* ViewController.swift in Sources */,
+				BCE12F14294B8861006A2255 /* MainRouter.swift in Sources */,
+				BCE12EFD294B87E3006A2255 /* MainViewController.swift in Sources */,
 				BCE12EF9294B87E3006A2255 /* AppDelegate.swift in Sources */,
 				BCE12EFB294B87E3006A2255 /* SceneDelegate.swift in Sources */,
+				BCE12F17294B8867006A2255 /* People.swift in Sources */,
+				BCE12F1A294B8870006A2255 /* MainPresenter.swift in Sources */,
+				BCE12F11294B885B006A2255 /* MainInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BCE12EFE294B87E3006A2255 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BCE12EFF294B87E3006A2255 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BCE12F03294B87E5006A2255 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -216,7 +300,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +355,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -287,7 +371,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "SWAPI-VIPER-Pods/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SWAPI-VIPER-Pods/Configuration/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -295,7 +379,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Mahmoud-hashin.SWAPI-VIPER-Pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -305,7 +389,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "SWAPI-VIPER-Pods/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SWAPI-VIPER-Pods/Configuration/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,7 +397,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Mahmoud-hashin.SWAPI-VIPER-Pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
