@@ -34,6 +34,8 @@ class DetailsRouter: DetailsRouterPr {
         presenter.view = view
         presenter.interactor = interactor
         
+        presenter.dataFetchedFromMain(with: data)
+        
         router.entry = view as DetailsEntryPoint
         
         return router

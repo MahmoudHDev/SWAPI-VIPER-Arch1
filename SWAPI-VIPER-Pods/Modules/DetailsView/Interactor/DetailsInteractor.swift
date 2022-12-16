@@ -6,14 +6,23 @@
 //
 
 import Foundation
+
 protocol DetailsInteractorPr {
-    var presenter: DetailsPresenterPr? {get set}
+    // Properties
+    var presenter: DetailsInteractorOutputPr? {get set}
+    
+    // Methods
+    func fetchDataFromPresenter(data: ResultModel)
 }
 
 class DetailsInteractor: DetailsInteractorPr {
     //MARK:- Properties
-    var presenter: DetailsPresenterPr?
+    var presenter: DetailsInteractorOutputPr?
     
     //MARK:- Methods
-    
+    func fetchDataFromPresenter(data: ResultModel) {
+        // Send data to the output
+        self.presenter?.dataFetchedFromInteractor(with: data)
+    }
+
 }

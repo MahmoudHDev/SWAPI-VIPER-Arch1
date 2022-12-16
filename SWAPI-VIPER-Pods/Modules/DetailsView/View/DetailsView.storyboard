@@ -16,13 +16,28 @@
                     <view key="view" contentMode="scaleToFill" id="3If-ne-kxY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWv-p6-8Qv">
+                                <rect key="frame" x="126.5" y="304.5" width="122.5" height="58.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="hgc-uj-r9V"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FWv-p6-8Qv" firstAttribute="centerY" secondItem="3If-ne-kxY" secondAttribute="centerY" id="OwJ-qN-Qg3"/>
+                            <constraint firstItem="FWv-p6-8Qv" firstAttribute="centerX" secondItem="3If-ne-kxY" secondAttribute="centerX" id="Yrl-UW-3aP"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="genderLabel" destination="FWv-p6-8Qv" id="yvb-wF-3yC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZvV-jF-QjP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-174" y="29"/>
+            <point key="canvasLocation" x="-175.19999999999999" y="28.335832083958024"/>
         </scene>
     </scenes>
     <resources>

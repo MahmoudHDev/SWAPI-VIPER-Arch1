@@ -11,14 +11,15 @@ protocol DetailsViewPr {
     
     var presenter: DetailsPresenterPr? {get set}
     
+    func updateUI(with person: ResultModel)
 }
 
-class DetailsViewController: UIViewController,DetailsViewPr {
+class DetailsViewController: UIViewController {
     //MARK:- Properties
     var presenter: DetailsPresenterPr?
 
     //MARK:- Outlets
-    
+    @IBOutlet weak var genderLabel: UILabel!
     //MARK:- View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,4 +33,14 @@ class DetailsViewController: UIViewController,DetailsViewPr {
         self.navigationController?.navigationBar.prefersLargeTitles = false
     }
     
+}
+
+extension DetailsViewController: DetailsViewPr {
+    
+    func updateUI(with person: ResultModel) {
+        DispatchQueue.main.async {
+            self.title = person.name
+            self.genderLabel.text = person.gender.rawValue
+        }
+    }
 }
