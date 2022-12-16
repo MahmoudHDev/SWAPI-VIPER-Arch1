@@ -24,6 +24,8 @@ protocol MainInteractorOutput: class {
     func dataFetchedSuccessfully(with people: People)
     func dataFailedToFetch(with error: Error)
     
+    // Push to the new viewController
+    func pushTheNewVC(with data: ResultModel)
 }
 
 
@@ -38,6 +40,7 @@ class MainPresenter: MainPresenterPr {
     //MARK:- Methods
     
     func didSelectRow(at indexPath: IndexPath) {
+        self.interactor?.arrPeopleSelectedPerson(at: indexPath)
         print("Did Select row at \(indexPath.row)")
     }
 
@@ -53,6 +56,10 @@ extension MainPresenter: MainInteractorOutput {
     }
     
     func dataFailedToFetch(with error: Error) {
-        
+        print("Error From Interactor \(error)")
+    }
+    
+    func pushTheNewVC(with data: ResultModel) {
+        self.router?.pushDetailViewController(on: view!, with: data)
     }
 }

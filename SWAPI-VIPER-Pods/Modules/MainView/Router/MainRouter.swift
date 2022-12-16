@@ -12,7 +12,12 @@ typealias EntryPoint = MainViewPr & UIViewController
 protocol MainRouterPr {
     var entry: EntryPoint? {get set}
     
+    // Create Module
     static func createModule() -> MainRouterPr
+    
+    // push new viewController
+    func pushDetailViewController(on view: MainViewPr, with resultModel: ResultModel)
+    
 }
 
 class MainRouter: MainRouterPr {
@@ -38,5 +43,13 @@ class MainRouter: MainRouterPr {
         
         return router
     }
-
+    
+    // Push new viewController
+    func pushDetailViewController(on view: MainViewPr, with resultModel: ResultModel) {
+        //instance of the Router
+        let detailsRouter = DetailsRouter.createDetailsModule(with: resultModel).entry
+        
+        let mainViewController = view as! MainViewController
+        mainViewController.navigationController?.pushViewController(detailsRouter!, animated: true)
+    }
 }
