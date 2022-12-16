@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC18FAEB294B907900B265DA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18FAEA294B907900B265DA /* NetworkManager.swift */; };
 		BCE12EF9294B87E3006A2255 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE12EF8294B87E3006A2255 /* AppDelegate.swift */; };
 		BCE12EFB294B87E3006A2255 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE12EFA294B87E3006A2255 /* SceneDelegate.swift */; };
 		BCE12EFD294B87E3006A2255 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE12EFC294B87E3006A2255 /* MainViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC18FAEA294B907900B265DA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		BCE12EF5294B87E3006A2255 /* SWAPI-VIPER-Pods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SWAPI-VIPER-Pods.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE12EF8294B87E3006A2255 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCE12EFA294B87E3006A2255 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +45,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC3E073C294CEFE600B6B9A2 /* DetailsView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DetailsView;
+			sourceTree = "<group>";
+		};
 		BCE12EEC294B87E3006A2255 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				BCE12F1F294B8899006A2255 /* MainView */,
+				BC3E073C294CEFE600B6B9A2 /* DetailsView */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -127,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				BCE12F10294B885B006A2255 /* MainInteractor.swift */,
+				BC18FAEA294B907900B265DA /* NetworkManager.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -229,6 +240,7 @@
 				BCE12EFD294B87E3006A2255 /* MainViewController.swift in Sources */,
 				BCE12EF9294B87E3006A2255 /* AppDelegate.swift in Sources */,
 				BCE12EFB294B87E3006A2255 /* SceneDelegate.swift in Sources */,
+				BC18FAEB294B907900B265DA /* NetworkManager.swift in Sources */,
 				BCE12F17294B8867006A2255 /* People.swift in Sources */,
 				BCE12F1A294B8870006A2255 /* MainPresenter.swift in Sources */,
 				BCE12F11294B885B006A2255 /* MainInteractor.swift in Sources */,

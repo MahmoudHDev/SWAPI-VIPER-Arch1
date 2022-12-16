@@ -25,7 +25,7 @@ class MainRouter: MainRouterPr {
 
         let view        : MainViewPr        = MainViewController()
         var interactor  : MainInteractorPr  = MainInteractor()
-        var presenter   : MainPresenterPr   = MainPresenter()
+        let presenter   = MainPresenter()
         
         view.presenter          = presenter
         interactor.presenter    = presenter

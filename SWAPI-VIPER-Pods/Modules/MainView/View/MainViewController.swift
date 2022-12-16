@@ -8,12 +8,18 @@
 import UIKit
 
 protocol MainViewPr: class {
+    // Properties
     var presenter: MainPresenterPr? {get set}
+    
+    //Methods
+    func reloadTableViewData()
+    func errorWhileFetchingData()
 }
 
 class MainViewController: UIViewController, MainViewPr {
+    
     //MARK:- Properties
-    var presenter: MainPresenterPr?
+    weak var presenter: MainPresenterPr?
     
     //MARK:- Outlets
     var tableView: UITableView = {
@@ -41,7 +47,7 @@ class MainViewController: UIViewController, MainViewPr {
         self.navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
-
+    //MARK:- TableView DataSource and Delegate
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {
 
     func setupTableView() {
@@ -51,12 +57,35 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        if let count = self.presenter?.people?.count {
+            return count
+        }else{
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "cell \(indexPath.row)"
+        if let data = self.presenter?.people?[indexPath.row] {
+            cell.textLabel?.text = data.name
+        }
+        
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.presenter?.didSelectRow(at: indexPath)
+    }
+    
+    func reloadTableViewData() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+
+        }
+    }
+
+    func errorWhileFetchingData() {
+        print("Show Error")
+    }
+
 }
